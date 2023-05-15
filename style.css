@@ -39,6 +39,7 @@ h3 {
 }
 
 .card {
+  cursor: pointer;
   background-color: white;
   border-radius: 20px;
   padding: 5px;
@@ -183,6 +184,7 @@ header img {
   font-weight: 100;
 }
 .search-button {
+  cursor: pointer;
   flex-grow: 0;
   position: relative;
   display: flex;
@@ -201,10 +203,12 @@ header img {
 }
 
 .icon-btn {
+  pointer-events: none;
   position: absolute;
   opacity: 0;
 }
 .main-btn {
+  cursor: pointer;
   opacity: 1;
 }
 
@@ -238,15 +242,14 @@ header img {
   padding: 14px 19px;
 }
 
+.filter:hover {
+  background: var(--filter-bg-color);
+}
+
 .filter-content .fa-solid {
   margin-right: 5px;
 }
 
-.filter .selection {
-  width: 100%;
-  border-radius: 25px;
-  background-color: var(--filter-bg-color);
-}
 /**** Info Bar ****/
 
 .info-bar {
@@ -421,10 +424,10 @@ footer {
   width: 440px;
   margin-bottom: 15px;
 }
-
-.footer-about-content {
-  gap: 15px;
+.footer-about p {
+  cursor: pointer;
 }
+
 .footer-hebergements {
   display: flex;
   flex-direction: column;
@@ -446,6 +449,10 @@ footer {
   /*** Info group ***/
   .search-bar {
     width: 40%;
+  }
+
+  .fa-arrow-pointer {
+    visibility: hidden;
   }
 
   .filter-bar {
@@ -618,6 +625,9 @@ footer {
   .main-btn {
     position: absolute;
     opacity: 0;
+  }
+  .fa-arrow-pointer {
+    visibility: hidden;
   }
 
   .filter-bar {
