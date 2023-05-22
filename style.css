@@ -171,11 +171,11 @@ header img {
 }
 
 .search-icon {
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--main-bg-color);
-  width: 50px;
   border-radius: 15px 0px 0px 15px;
   cursor: pointer;
 }
@@ -318,7 +318,6 @@ header img {
 }
 
 .hebergements-cards .card-content {
-  width: 100%;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
@@ -362,7 +361,6 @@ header img {
 }
 
 .populaires-cards .card-content {
-  width: 67%;
   padding-left: 15px;
   display: flex;
   flex-direction: column;
@@ -423,25 +421,17 @@ footer {
   height: 163px;
 }
 
-.footer-about {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 440px;
-  margin-bottom: 15px;
-}
-
-.footer-hebergements {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 440px;
-}
+.footer-about,
+.footer-hebergements,
 .footer-assistance {
   display: flex;
   flex-direction: column;
   padding: 20px;
   width: 440px;
+}
+
+.footer-about {
+  margin-bottom: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -454,20 +444,14 @@ footer {
     width: 40%;
   }
 
-  .fa-arrow-pointer {
-    visibility: hidden;
-  }
-
   .filter-bar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
   }
 
   .filter-tab {
     display: flex;
-    flex-direction: row;
     gap: 10px;
   }
 
@@ -488,7 +472,6 @@ footer {
 
   .populaires-cards {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -529,7 +512,6 @@ footer {
   header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-bottom: 30px;
   }
 
@@ -540,55 +522,30 @@ footer {
   .header-content {
     position: relative;
     display: flex;
-    justify-content: center;
     padding: 0;
     gap: 0;
   }
 
-  .link-hebergement {
-    margin: 0;
-    flex: 1;
-  }
+  .link-hebergement,
   .link-activity {
     margin: 0;
     flex: 1;
   }
 
-  .link-hebergement {
-    position: relative;
-  }
-
+  .link-hebergement,
   .link-activity {
     position: relative;
   }
+
   .link-hebergement a,
   .link-activity a {
     margin: 0;
     margin-bottom: 15px;
-    width: 100%;
     justify-content: center;
     padding: 0;
   }
 
-  .link-hebergements-bar-blue {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    height: 2px;
-    background-color: var(--main-color);
-  }
-  .link-hebergements-bar-grey {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 1;
-    height: 2px;
-    background-color: var(--main-bg-color);
-  }
-
+  .link-hebergements-bar-blue,
   .link-activity-bar-blue {
     position: absolute;
     left: 0;
@@ -598,6 +555,7 @@ footer {
     height: 2px;
     background-color: var(--main-color);
   }
+  .link-hebergements-bar-grey,
   .link-activity-bar-grey {
     position: absolute;
     left: 0;
@@ -607,35 +565,27 @@ footer {
     height: 2px;
     background-color: var(--main-bg-color);
   }
+
   .link-activity a:hover,
   .link-hebergement a:hover {
     color: var(--main-color);
   }
-  .link-hebergement:hover .link-hebergements-bar-blue {
-    opacity: 1;
-  }
-  .link-hebergement:hover .link-hebergements-bar-grey {
-    opacity: 0;
-  }
-
+  .link-hebergement:hover .link-hebergements-bar-blue,
   .link-activity:hover .link-activity-bar-blue {
     opacity: 1;
   }
+  .link-hebergement:hover .link-hebergements-bar-grey,
   .link-activity:hover .link-activity-bar-grey {
     opacity: 0;
   }
+
   /*** Info-group ***/
 
   .info-group {
     padding: 0px 20px;
-    margin: 0;
   }
   .search-bar {
     width: 100%;
-  }
-  .search-button {
-    width: 49px;
-    border-radius: 15px;
   }
 
   .icon-search {
@@ -653,13 +603,6 @@ footer {
     position: absolute;
     right: 0;
     opacity: 0;
-  }
-  .fa-arrow-pointer {
-    visibility: hidden;
-  }
-
-  .filter-bar {
-    width: 100%;
   }
 
   .filter-tab {
@@ -730,10 +673,5 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  header {
-    position: relative;
-    width: 1400px;
   }
 }
